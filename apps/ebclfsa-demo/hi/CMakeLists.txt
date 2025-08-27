@@ -9,6 +9,15 @@ function(target_enable_hi target)
   )
 endfunction()
 
+add_executable(lisa-demo lisa_demo.c)
+
+target_include_directories(lisa-demo PRIVATE 
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/../common
+  ${CMAKE_CURRENT_SOURCE_DIR}/../shmlib/include)
+target_enable_hi(lisa-demo)
+
+
 add_executable(hi_main hi_main.c)
 
 target_include_directories(hi_main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../common)

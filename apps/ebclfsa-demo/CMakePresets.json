@@ -27,6 +27,16 @@
             "environment": {
                 "APP_NAME": "ebclfsa-demo"
             }
+        },
+        {
+            "name": "lisa-demo",
+            "inherits": "ebclfsa-aarch64",
+            "cacheVariables": {
+                "BUILD_HI": "ON"
+            },
+            "environment": {
+                "APP_NAME": "lisa-demo"
+            }
         }
     ],
     "buildPresets": [
